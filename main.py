@@ -1,4 +1,5 @@
 from tkinter import *
+import calculator
 
 # Variables
 root = Tk()
