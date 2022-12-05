@@ -1,5 +1,5 @@
 from tkinter import *
-# import calculator
+import calculator as calc
 import login
 
 login.main()
@@ -20,7 +20,7 @@ user.place(x=18, y=24)
 heading = Label(frame, text='Ferramentas', font=('Arial', 28))
 heading.place(x=260, y=106, width=236, height=50)
 
-btn_calculadora = Button(frame, text='Calculadora', border=0, bg='black', fg='white')
+btn_calculadora = Button(frame, text='Calculadora', border=0, bg='black', fg='white', command=calc.main)
 btn_calculadora.place(x=272, y=208, width=202, height=41)
 
 clock = Button(frame, text='Relógio', border=0, bg='black', fg='white')

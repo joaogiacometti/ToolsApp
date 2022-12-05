@@ -1,3 +1,4 @@
+import tkinter
 from tkinter import *
 
 
@@ -29,7 +30,7 @@ def main():
         equation_text = ''
         equation_label.set('')
 
-    root = Tk()
+    root = tkinter.Toplevel()
     root.geometry('625x700')
     root.title('Calculadora')
     root.config(bg='#555050')
@@ -116,4 +117,5 @@ def main():
     root.mainloop()
 
 
-main()
+if __name__ == '__main__':
+    main()
