@@ -1,7 +1,9 @@
 from tkinter import *
-import calculator
+# import calculator
+import login
 
-# Variables
+login.main()
+
 root = Tk()
 
 root.title('Menu')
@@ -11,7 +13,8 @@ root.resizable(False, False)
 frame = Frame(root, width=750, height=500)
 frame.place(x=0, y=0)
 
-user = Label(frame, text='Bem vindo!', font=('Arial', 23))
+
+user = Label(frame, text=f'Bem vindo {login.get_user()}!', font=('Arial', 23))
 user.place(x=18, y=24)
 
 heading = Label(frame, text='Ferramentas', font=('Arial', 28))
