@@ -1,12 +1,28 @@
+import tkinter
 from tkinter import *
 from tkinter import messagebox as mb
 
-user = ''
+log = False
 
 
-def get_user():
-    global user
-    return user
+class User:
+
+    def __init__(self, user, password):
+        self.user = user
+        self.password = password
+        self.logged = False
+
+    def get_user(self):
+        return self.user
+
+    def get_password(self):
+        return self.password
+
+    def get_logged(self):
+        return self.logged
+
+    def set_logged(self, boolean):
+        self.logged = boolean
 
 
 def main():
@@ -16,11 +32,13 @@ def main():
     root.resizable(False, False)
 
     def singin():
-        global user
         user = user_entry.get()
         pwd = pwd_entry.get()
-
-        if user == "admin" and pwd == "123":
+        actual_user = User(user, pwd)
+        if actual_user.get_user() == "admin" and actual_user.get_password() == "123":
+            global log
+            actual_user.set_logged(True)
+            log = True
             root.destroy()
         else:
             mb.showerror(title='Erro', message='Usuário ou senha incorretos!')
@@ -51,3 +69,7 @@ def main():
     register_button.place(x=360, y=378, width=80)
 
     root.mainloop()
+
+
+if __name__ == '__main__':
+    main()
