@@ -1,8 +1,10 @@
+import login
 from tkinter import *
 from tkinter import messagebox as mb
 import calculator as calc
 import clock
-import login
+import guess
+
 
 
 login.main()
@@ -29,7 +31,7 @@ if login.log:
     clock = Button(frame, text='Relógio', border=0, bg='black', fg='white', command=clock.main)
     clock.place(x=272, y=292, width=202, height=41)
 
-    guess = Button(frame, text='Adivinhe o número', border=0, bg='black', fg='white')
+    guess = Button(frame, text='Adivinhe o número', border=0, bg='black', fg='white', command=guess.main)
     guess.place(x=272, y=376, width=202, height=41)
 
     root.mainloop()
