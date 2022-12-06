@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox as mb
 import calculator as calc
+import clock
 import login
 
 
@@ -25,7 +26,7 @@ if login.log:
     btn_calculadora = Button(frame, text='Calculadora', border=0, bg='black', fg='white', command=calc.main)
     btn_calculadora.place(x=272, y=208, width=202, height=41)
 
-    clock = Button(frame, text='Relógio', border=0, bg='black', fg='white')
+    clock = Button(frame, text='Relógio', border=0, bg='black', fg='white', command=clock.main)
     clock.place(x=272, y=292, width=202, height=41)
 
     guess = Button(frame, text='Adivinhe o número', border=0, bg='black', fg='white')
