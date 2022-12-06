@@ -25,13 +25,13 @@ if login.log:
     heading = Label(frame, text='Ferramentas', font=('Arial', 28))
     heading.place(x=260, y=106, width=236, height=50)
 
-    btn_calculadora = Button(frame, text='Calculadora', border=0, bg='black', fg='white', command=calc.main)
+    btn_calculadora = Button(frame, text='Calculadora', border=0, bg='#61AEFF', fg='black', command=calc.main)
     btn_calculadora.place(x=272, y=208, width=202, height=41)
 
-    clock = Button(frame, text='Relógio', border=0, bg='black', fg='white', command=clock.main)
+    clock = Button(frame, text='Relógio', border=0, bg='#61AEFF', fg='black', command=clock.main)
     clock.place(x=272, y=292, width=202, height=41)
 
-    guess = Button(frame, text='Adivinhe o número', border=0, bg='black', fg='white', command=guess.main)
+    guess = Button(frame, text='Adivinhe o número', border=0, bg='#61AEFF', fg='black', command=guess.main)
     guess.place(x=272, y=376, width=202, height=41)
 
     root.mainloop()
